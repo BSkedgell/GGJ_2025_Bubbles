@@ -39,6 +39,10 @@ public class InputSystem : MonoBehaviour
     [Header("Head Rotation Settings")]
     public float lookAtPoint = 2.8f;
 
+
+    [Header("Gravity Settings")]
+    public float gravityValue = 1.2f;
+
     Transform camCenter;
     Transform mainCam;
 
@@ -50,6 +54,7 @@ public class InputSystem : MonoBehaviour
     bool hitDetected;
 
     Animator playerAnim;
+    CharacterController cc;
 
         void Start()
     {
@@ -57,6 +62,7 @@ public class InputSystem : MonoBehaviour
         camCenter = Camera.main.transform.parent;
         mainCam = Camera.main.transform;
         playerAnim = GetComponent<Animator>();
+        cc = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -64,6 +70,11 @@ public class InputSystem : MonoBehaviour
         if (Input.GetAxis(input.forwardInput) !=0 || Input.GetAxis(input.strafeInput) !=0)
         {
             RotateToCameView();
+        }
+
+        if(!cc.isGrounded)
+        {
+            cc.Move(new Vector3(transform.position.x, transform.position.y - gravityValue, transform.position.z ));
         }
         isAiming = Input.GetButton(input.aim);
         if(testAim)
@@ -78,6 +89,7 @@ public class InputSystem : MonoBehaviour
         if(isAiming)
         {
             Aim();
+            bowScript.EquipBow();
             moveScript.CharacterPullString(Input.GetButton(input.fire));
             if(Input.GetButtonUp(input.fire))
                 {
@@ -94,6 +106,7 @@ public class InputSystem : MonoBehaviour
         }
         else
         {
+            bowScript.UnEquipBow();
             bowScript.RemoveCrossHair();
             DisableArrow();
             Release();
@@ -145,6 +158,7 @@ public class InputSystem : MonoBehaviour
 
     void RotateCharactersSpine()
     {
+        RotateToCameView();
         spine.LookAt(ray.GetPoint(50));
         spine.Rotate(spineOffset);
     }

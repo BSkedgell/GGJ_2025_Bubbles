@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5578726526148981227}
   - component: {fileID: 1458906462900730601}
   - component: {fileID: -3001438530926014517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153c6cd82d548473f9790d53464e9582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 10
 --- !u!1001 &8367540303023653457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,9 +104,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1935000261677750701}
     m_Modifications:
+    - target: {fileID: 1047567609848626, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493936187531040, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936848035193434, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1959729250425484, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
       propertyPath: m_Name
       value: Arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959729250425484, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4534147065827568, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
       propertyPath: m_LocalPosition.x

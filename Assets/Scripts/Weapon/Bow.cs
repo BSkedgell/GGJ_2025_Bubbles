@@ -76,14 +76,14 @@ public class Bow : MonoBehaviour
         bowSettings.bowString.transform.parent = bowSettings.stringInitialParent; 
     }
 
-    void EquipBow()
+    public void EquipBow()
     {
         this.transform.position = bowSettings.EquipPos.position;
         this.transform.rotation = bowSettings.EquipPos.rotation;
         this.transform.parent = bowSettings.EquipParent;
     }
 
-    void UnEquipBow()
+    public void UnEquipBow()
     {
         this.transform.position = bowSettings.UnEquipPos.position;
         this.transform.rotation = bowSettings.UnEquipPos.rotation;
@@ -112,7 +112,7 @@ public class Bow : MonoBehaviour
         Vector3 dir = hitPoint - bowSettings.arrowPos.position;
         currentArrow = Instantiate(bowSettings.arrowPrefab, bowSettings.arrowPos.position, bowSettings.arrowPos.rotation) as Rigidbody;
 
-        currentArrow.AddForce(dir * bowSettings.arrowForce, ForceMode.VelocityChange);
+        currentArrow.AddForce(dir * bowSettings.arrowForce, ForceMode.Force);
     }
 
 }
