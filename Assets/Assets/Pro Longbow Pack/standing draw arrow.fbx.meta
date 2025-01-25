@@ -17,7 +17,8 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: Event Pull has a time (1.019577) outside the clip's
+      valid range (0.000000..1.000000). It will never be fired
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -57,6 +58,13 @@ ModelImporter:
       events:
       - time: 0.3
         functionName: EnableArrow
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6813775
+        functionName: Pull
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Movement))]
+[RequireComponent(typeof(Animator))]
 
 public class InputSystem : MonoBehaviour
 {
@@ -46,11 +47,16 @@ public class InputSystem : MonoBehaviour
 
     public bool testAim;
 
+    bool hitDetected;
+
+    Animator playerAnim;
+
         void Start()
     {
         moveScript = GetComponent<Movement>();
         camCenter = Camera.main.transform.parent;
         mainCam = Camera.main.transform;
+        playerAnim = GetComponent<Animator>();
     }
 
     void Update()
@@ -76,6 +82,14 @@ public class InputSystem : MonoBehaviour
             if(Input.GetButtonUp(input.fire))
                 {
                     moveScript.CharacterFireArrow();
+                    if(hitDetected)
+                    {
+                        bowScript.Fire(hit.point);
+                    }
+                    else
+                    {
+                        bowScript.Fire(ray.GetPoint(300f));
+                    }
                 }
         }
         else
@@ -118,11 +132,13 @@ public class InputSystem : MonoBehaviour
         ray = new Ray(camPosition, dir);
         if(Physics.Raycast(ray, out hit, 500f, aimLayers))
         {
+            hitDetected = true;
             Debug.DrawLine(ray.origin, hit.point, Color.green);
             bowScript.ShowCrossHair(hit.point);
         }
         else
         {
+            hitDetected = false;
             bowScript.RemoveCrossHair();
         }
     }
@@ -151,5 +167,18 @@ public class InputSystem : MonoBehaviour
     public void Release()
     {
         bowScript.ReleaseString();
+    }
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        if (isAiming)
+        {
+            playerAnim.SetLookAtWeight(1f);
+            playerAnim.SetLookAtPosition(ray.GetPoint(lookAtPoint));
+        }
+        else
+        {
+            playerAnim.SetLookAtWeight(0);
+        }
     }
 }

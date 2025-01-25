@@ -9,9 +9,10 @@ public class Bow : MonoBehaviour
     {
         [Header("Arrow Settings")]
         public float arrowCount;
-        public GameObject arrowPrefab;
+        public Rigidbody arrowPrefab;
         public Transform arrowPos; 
         public Transform arrowEquipParent;
+        public float arrowForce = 3;
 
         [Header("Bow Equip & UnEquip Settings")]
         public Transform EquipPos;
@@ -35,7 +36,7 @@ public class Bow : MonoBehaviour
     public GameObject crossHairPrefab;
     GameObject currentCrossHair;
 
-    GameObject currentArrow;
+    Rigidbody currentArrow;
 
     bool canPullString = false;
     bool canFireArrow = false;
@@ -48,10 +49,7 @@ public class Bow : MonoBehaviour
 
     void Update()
     {
-        if(canPullString)
-        {
 
-        }
     }
 
     public void PickArrow()
@@ -66,12 +64,14 @@ public class Bow : MonoBehaviour
 
     public void PullString()
     {
+   
         bowSettings.bowString.transform.position = bowSettings.stringHandPullPos.position;
         bowSettings.bowString.transform.parent = bowSettings.stringHandPullPos;
     }
 
     public void ReleaseString()
     {
+   
         bowSettings.bowString.transform.position = bowSettings.stringInitialPos.position;
         bowSettings.bowString.transform.parent = bowSettings.stringInitialParent; 
     }
@@ -105,6 +105,14 @@ public class Bow : MonoBehaviour
         {
             Destroy(currentCrossHair);
         }
+    }
+
+    public void Fire(Vector3 hitPoint)
+    {
+        Vector3 dir = hitPoint - bowSettings.arrowPos.position;
+        currentArrow = Instantiate(bowSettings.arrowPrefab, bowSettings.arrowPos.position, bowSettings.arrowPos.rotation) as Rigidbody;
+
+        currentArrow.AddForce(dir * bowSettings.arrowForce, ForceMode.VelocityChange);
     }
 
 }
