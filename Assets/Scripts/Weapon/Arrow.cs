@@ -30,6 +30,10 @@ public class Arrow : MonoBehaviour
         rb.isKinematic = true;
         bx.isTrigger = true;
         }
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
 
