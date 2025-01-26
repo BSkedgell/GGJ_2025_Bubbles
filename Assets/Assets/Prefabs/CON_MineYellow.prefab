@@ -83,15 +83,15 @@ PrefabInstance:
     - target: {fileID: -5038736057477599914, guid: 1437e7c703cce9049a950f89ccc2e868, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     - target: {fileID: -4599334580397190636, guid: 1437e7c703cce9049a950f89ccc2e868, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     - target: {fileID: -572110213964984986, guid: 1437e7c703cce9049a950f89ccc2e868, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     - target: {fileID: 919132149155446097, guid: 1437e7c703cce9049a950f89ccc2e868, type: 3}
       propertyPath: m_Name
       value: Mine_Yellow
@@ -99,11 +99,11 @@ PrefabInstance:
     - target: {fileID: 2490615871243504138, guid: 1437e7c703cce9049a950f89ccc2e868, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     - target: {fileID: 3079761275481485695, guid: 1437e7c703cce9049a950f89ccc2e868, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     m_RemovedComponents:
     - {fileID: 8698275121693028993, guid: 1437e7c703cce9049a950f89ccc2e868, type: 3}
     m_RemovedGameObjects: []

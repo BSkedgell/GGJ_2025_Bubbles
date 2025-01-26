@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: -194214544990578211, guid: 371aff708ea95ce4695b131f2ff4912d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     - target: {fileID: 919132149155446097, guid: 371aff708ea95ce4695b131f2ff4912d, type: 3}
       propertyPath: m_Name
       value: Heart
@@ -91,11 +91,11 @@ PrefabInstance:
     - target: {fileID: 2342439986421877749, guid: 371aff708ea95ce4695b131f2ff4912d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     - target: {fileID: 3381003720919887987, guid: 371aff708ea95ce4695b131f2ff4912d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b91bc4a0bcfef6d46ac3af66b509dece, type: 2}
+      objectReference: {fileID: 2100000, guid: 423ebd688acd48e42952cee946f197b6, type: 2}
     m_RemovedComponents:
     - {fileID: 8698275121693028993, guid: 371aff708ea95ce4695b131f2ff4912d, type: 3}
     m_RemovedGameObjects: []
