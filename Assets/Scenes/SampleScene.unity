@@ -488,6 +488,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c20684f4cfee51a40b0ab6523769ab2c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce9c37d106c7d8747bc408115fb2442d, type: 2}
     - target: {fileID: 919132149155446097, guid: c20684f4cfee51a40b0ab6523769ab2c, type: 3}
       propertyPath: m_Name
       value: 13crater
@@ -1201,6 +1205,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1029c533963ca1c42a76ce3179812a63, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce9c37d106c7d8747bc408115fb2442d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1029c533963ca1c42a76ce3179812a63, type: 3}
       propertyPath: m_Name
       value: 12crater
@@ -1905,6 +1913,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5ebf2584aa3b7f84aaecc485c7bdf2ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce9c37d106c7d8747bc408115fb2442d, type: 2}
     - target: {fileID: 919132149155446097, guid: 5ebf2584aa3b7f84aaecc485c7bdf2ef, type: 3}
       propertyPath: m_Name
       value: 14crater
@@ -2051,6 +2063,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 00d288bc415d6264cb1637259dc32831, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce9c37d106c7d8747bc408115fb2442d, type: 2}
     - target: {fileID: 919132149155446097, guid: 00d288bc415d6264cb1637259dc32831, type: 3}
       propertyPath: m_Name
       value: 18crater (1)
@@ -2791,6 +2807,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 00d288bc415d6264cb1637259dc32831, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce9c37d106c7d8747bc408115fb2442d, type: 2}
     - target: {fileID: 919132149155446097, guid: 00d288bc415d6264cb1637259dc32831, type: 3}
       propertyPath: m_Name
       value: 18crater
